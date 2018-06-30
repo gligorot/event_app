@@ -1,0 +1,6 @@
+<div>
+	<p> Name: <%= event.title %> </p>
+	<p> Description: <%= event.description %> </p>
+	<p> <%= link_to "#{event.creator.name}", user_path(event.creator) %> </p>
+	<hr>
+</div>

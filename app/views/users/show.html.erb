@@ -1,0 +1,12 @@
+<h1>User <%= @user.name %> with id <%= @user.id %></h1>
+
+<br>
+
+<h2> Events created by this user: </h2>
+<% if @user.created_events.any? %>
+	<h3> Events (<%= @user.created_events.count %>)</h3>
+
+	<ul>
+		<%= render @events %>
+	</ul>
+<% end %>
