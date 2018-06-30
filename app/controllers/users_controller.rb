@@ -4,8 +4,10 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user 	= User.find(params[:id])
-  	@events = @user.created_events
+  	@user 	         = User.find(params[:id])
+    @created_events  = current_user.created_events
+  	@upcoming_events = current_user.upcoming_events
+    @previous_events = current_user.previous_events
   end
 
   def create
@@ -23,4 +25,6 @@ class UsersController < ApplicationController
   	def user_params
   		params.require(:user).permit(:name)
   	end
+
+    
 end

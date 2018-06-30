@@ -1,1 +1,6 @@
-<%= @event.creator.name %>
+<h2> Creator: <%= @event.creator.name %> </h2>
+
+<h3> Attendees (<%= @event.attendees.count %>) </h3>
+<ul>
+	<%= render @event.attendees %>
+</ul>

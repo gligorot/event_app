@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+
   	<% if session[:user_id] %>
   		<h2> Currently signed in user: <%= current_user.name %></h2>
 	<% end %> 
